@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Service App</title>
+    <link rel="stylesheet" href="attendence.css">
+</head>
+<body>
+<!-- login page -->
+    <div class="login_cover"></div>
+
+    <div class="loginform">
+        <center><div class="hedinglgin">Attendence service</div></center>
+        <div class="form">
+            <form>
+                <label class="login_label">User name</label><br>
+                <input  class="input_tag" type="text" id="user_name"><br><br>
+                <label class="login_label">Password</label><br>
+                <input class="input_tag" type="password" id="password">
+                <br>
+            </form>
+        </div>
+        <div class="login_button" onclick="fetch_username_and_password()">
+            Login
+        </div>
+    </div>
+<!-- login page end -->
+
+<!-- group_container start -->
+    <div class="group_container_cover">
+        <div class="group_container">
+            <div class="group_title">Groups</div>
+            
+        </div>
+
+    </div>
+
+
+    
+
+<!-- group_container end -->
+
+    <script src="attendence.js"></script>
+</body>
+</html>
