@@ -1,0 +1,235 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.attendence_container{
+    background-color: white;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 10px;
+    border: 2px solid gray;
+    padding: 0.5rem 0.5rem;
+
+}
+.conatiner_heading{
+    display: flex;
+    align-items: center;
+    background-color: green;
+    color: white;
+    height: 3rem;
+    font-family: consolas;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+.back_image{
+    background-image: url('back.jpg');
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    left: 40%;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.attendence_data_Container{
+    width: 20rem;
+    height: 22rem;
+    border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.add_icon{
+    margin-top: 0.5rem;
+    background-image: url('add_button.png');
+    background-size: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: relative;
+    top: 3%;
+    left: 45%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.person_data{
+    padding: 0.5rem 0.2rem;
+    display: flex;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 19rem;
+    height: 2rem;
+    margin-left: 0.4rem;
+    margin-top: 0.3rem;
+}
+.person_name_container{
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    font-family: consolas;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.call_image{
+    background-image: url('call2.png');
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.absent_present_container{
+    position: relative;
+    left: 30%;
+    background-color: rgba(255, 0, 0, 0.3);
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: red;
+    font-family: consolas;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.present_text{
+    border: 2px solid green;
+    color: green;
+    background-color: rgba(0, 255, 0, 0.3);
+}
+.phone_nmber{
+    position: relative;
+    left: 20%;
+}
+.add_person_cover{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    opacity: 0;
+    z-index: -1;
+}
+.show_add_person_cover{
+    top: 0%;
+    opacity: 1;
+    z-index: 1;
+}
+.add_person_dailog_box{
+    top: -100%;
+    position: fixed;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 10px;
+    width: 20rem;
+    height: 21rem;
+    padding: 0.5rem 0.5rem;
+}
+.show_person_dailog_box{
+    top: 10%;
+}
+.heading{
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: green;
+    color: white;
+    font-size: 1.5rem;
+    font-family: consolas;
+    font-weight: bold;
+    width: 19rem;
+    height: 2rem;
+    border-radius: 10px;
+}
+.cross_image{
+    background-image: url('cross.png');
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: 40%;
+    border-radius: 60%;
+    cursor: pointer;
+}
+.take_person_details{
+    padding: 0.5rem 0.5rem;
+    align-items: center;
+}
+.person_details{
+    background: transparent;
+    border: 0rem;
+    outline: 0rem;
+    border-bottom: 1.5px solid green;
+    width: 15rem;
+    height: 2rem;
+    font-family: consolas;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.textarea{
+    outline: 0rem;
+    border-radius: 10px;
+    border: 2px solid green;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    width: 17rem;
+    margin-left: 0.3rem;
+}
+.add_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 19.5rem;
+    height: 2rem;
+    background-color: white;
+    color: green;
+    font-family: consolas;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid green;
+    cursor: pointer;
+}
+.add_button:hover{
+    background-color: green;
+    color: white;
+}
+.submit_container{
+    display: flex;
+    align-items: center;
+}
+.submit_button{
+    margin-top: 0.5rem;
+    display: none;
+    width: 8rem;
+    height: 2.5rem;
+    cursor: pointer;
+    border: 2px solid green;
+    border-radius: 10px;
+    color: green;
+    font-family: consolas;
+    font-weight: bold;
+    font-size: 1.3rem;
+    /* display: none; */
+}
+.show_submit_button{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit_button:hover{
+    background-color: green;
+    color: white;
+}

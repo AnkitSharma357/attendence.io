@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Information</title>
-    <link rel="stylesheet" href="attendence.css">
+    <link rel="stylesheet" href="group.css">
     
 </head>
-<body onload="fetch_user()">
+<body>
 <!-- group_container start -->
     <div class="group_container_cover">
-        <div class="group_container">
-            <div class="group_title">Groups
-                <div class="logout" onclick="Goto_login_page()"></div>
-            </div>
-            <div class="group_information"></div>
-            <div class="add_group_logo" onclick="add_grp_dailog_box()"></div>
+        <div class="group_heading">Group
+            <div class="logout_image"></div>
         </div>
-
+        <div class="all_group_container"></div>
+        <div class="group_add_button" onclick="add_dailog_box()"></div>
+    </div>
+    <div class="delete_group_cover">
+        <div class="delete_group_choise">
+            <div class="caution"></div>
+        </div>
     </div>
 <!-- group_container end -->
 
@@ -25,39 +27,28 @@
     <div class="add_group_cover">
         <div class="add_group_dailog_box">
             <div class="add_group_heading">Add Group
-                <div class="close_button" onclick="remove_add_group_interface()"></div>
+                <div class="close_button" onclick="remove_add_dailog_box()"></div>
             </div>
             <div class="get-group_information">
-                <label>Name</label>
-                <input type="text" id="group_name"></input> <br>
-                <label>Place</label>
-                <input type="text" id="group_place"></input> <br>
-                <h4>Choise frequency</h4> 
-                <input type="checkbox" id="sunday" value="Sunday">Sunday</input> <br>
-                <input type="checkbox" id="monday" value="monday">Monday</input> <br>
-                <input type="checkbox" id="tuesday" value="tuesday">Tuesday</input> <br>
-                <input type="checkbox" id="wednesday" value="wednesday">Wednesday</input> <br>
-                <input type="checkbox" id="Thursday" value="thrusday">Thrusday</input> <br>
-                <input type="checkbox" id="friday" value="friday">Friday</input> <br>
-                <input type="checkbox" id="saturday" value="saturday">Saturday</input> <br>
+                <label>Name</label><br>
+                <input type="text" class="goup_name" id="group_name"></input> <br>
+                <label>Place</label><br>
+                <input type="text" class="goup_name" id="group_place"></input>
                 <!-- <input type="checkbox" id="sunday" value="Sunday">Sunday</input> <br> -->
+                <div class="add_button" onclick="add_group()">+Add</div>
             </div>
-            <div class="add_button" onclick="get_group_data()">+Add</div>
+            
         </div>
     </div>
 <!-- add group dailog box end -->
 
-<!-- <div class="notification" id="group_page"></div> -->
-
-<!-- <div class="conformation_to_delete_group">Want to delete the group?
-    <div class="contain_yes_no">
-        <div class="yes" onclick="delete_group()">Yes</div>
-        <div class="no" onclick="donot_delete_group()">No</div>
-    </div>
-</div> -->
+<!-- notification_panel -->
+<div class="notifictation_panel">
+    <div class="cross_noti"></div>
+</div>
 
 
-    <script src="attendence.js"></script>
+    <script src="group.js"></script>
     
 </body>
 </html>

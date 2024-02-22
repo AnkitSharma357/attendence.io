@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<!-- login page -->
+    
+    <!-- <div class="login_cover"></div> -->
+    <nav>
+        <h2>Login</h2>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="loginform">
+        <center><div class="hedinglgin">Login</div></center>
+        <div class="form">
+            <form>
+                <label class="login_label">Name</label><br>
+                <input  class="input_tag" type="text" id="user_name"><br><br>
+                <label class="login_label">email</label><br>
+                <input class="input_tag" type="email" id="email"><br><br>
+                <label class="login_label">Password</label><br>
+                <input class="input_tag" type="password" id="password">
+                <br>
+            </form>
+        </div>
+        <div class="login_button" onclick="fetch_user()">
+            Login
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

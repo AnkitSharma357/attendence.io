@@ -4,66 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take Attendence</title>
-    <link rel="stylesheet" href="attendence.css">
+    <link rel="stylesheet" href="take_attendence.css">
 </head>
-<body onload="add_attendence_data()">
-    <div class="attendence_cover">
-        <div class="attendence_container">
-            <div class="attendence_heading">Take Attendence
-                <div class="gobcak" onclick="goto_group_page()"></div>
-            </div>
-            <div class="attendence_data"></div>
-            <div class="add_member_logo" onclick="show_add_member_data_dailog_box()"></div>
+<body>
+    <div class="attendence_container">
+        <div class="conatiner_heading">Attendence
+            <div class="back_image" onclick="goto_group()"></div>
+        </div>
+        <div class="attendence_data_Container"></div>
+        <div class="submit_container">
+            <div class="submit_button">Submit</div>
+            <div class="add_icon" onclick="show_add_person_dailog_box()"></div>
         </div>
     </div>
-
-<!-- add member_details start -->
-    <div class="add_member_dailog_box_container_cover">
-        <div class="add_member_dailog_box">
-            <div class="add_member_heading">Add Member
-                <div class="cut_button" onclick="hide_add_member_dailog_box()"></div>
+    
+    <!-- for adding person in a group from attendence page -->
+    <div class="add_person_cover">
+        <div class="add_person_dailog_box">
+            <div class="heading">Add Member
+                <div class="cross_image" onclick="hide_add_person_dailog_box()"></div>
             </div>
-            <div class="member_details">
-                <form>
-                    <label>Name</label>
-                    <input type="text" placeholder="name" class="name" id="member_name"></input><br>
-    
-                    <label>Mobile</label>
-                    <input type="number" placeholder="phone" class="phone" id="member_phone_no"></input><br>
-    
-                    <label>Suitable Day</label>
-                    <select class="Suitable_day">
-                        <option value="day_not_Selected" class="Suitable Day">select_day</option>
-                        <option value="Sunday" class="Suitable Day">Sunday</option>
-                        <option value="Monday" class="Suitable Day">Monday</option>
-                        <option value="Tuesday" class="Suitable Day">Tuesday</option>
-                        <option value="Wednesday" class="Suitable Day">Wednesday</option>
-                        <option value="Thursday" class="Suitable Day">Thursday</option>
-                        <option value="Friday" class="Suitable Day">Friday</option>
-                        <option value="Saturday" class="Suitable Day">Saturday</option>
-                    </select><br>
-    
-                    <label>Area</label>
-                    <input type="text" placeholder="area" class="Area" id="member_area"></input><br>
-    
-                    <label>Facilitator</label>
-                    <input type="text" placeholder="Facilitator" class="Facilitator" id="member_facilitor"></input><br>
-    
-                    <label>Program</label>
-                    <input type="text" placeholder="program" class="program_attend" id="member_program_attending"></input><br>
-
-                    <textarea placeholder="write some comments" cols="30" rows="10" id="comments_for_member"></textarea>
-    
-                </form>
-                <div class="add_button_for_member" onclick="add_member_to_the_server()">+Add</div>
+            <div class="take_person_details">
+                <!-- <label>Name</label> -->
+                <input type="text" placeholder="name" class="person_details" id="name" required><br>
+                <!-- <label>Phone</label> -->
+                <input type="number" placeholder="phone_no" class="person_details" id="phone_no" required><br>
+                <!-- <label>Address</label> -->
+                <input type="text" placeholder="address" class="person_details" id="address"><br><br>
+                <textarea id="commnets" cols="20" rows="5" placeholder="write comments here" class="textarea"></textarea>
             </div>
+            <div class="add_button" onclick="put_person_details()">+ADD</div>
         </div>
-
     </div>
-
-    <!-- <div class="notification" id="Take_attendence"></div> -->
-<!-- add member_details ends -->
-
-    <script src="attendence.js"></script>
+    <script src="take_attendence.js"></script>
 </body>
 </html>

@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.loginform{
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 20rem;
+    height: 25rem;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,0%);
+    z-index: 1;
+    border: 2px solid gray;
+}
+.shwologinform{
+    top: -60%;
+    opacity: 0;
+    z-index: -1;
+    width: 0rem;
+    height: 0rem;
+}
+.form{
+    /* background-color: red; */
+    margin-top:1rem ;
+    margin-left: 2.5rem;
+    border-radius: 10px;
+    width: 15rem;
+    height: 14rem;
+    padding: 0.5rem 0.5rem;
+
+}
+.hedinglgin{
+    background-color: green;
+    margin-top: 1rem;
+    width: 14rem;
+    height: auto;
+    padding: 0.3rem 0.3rem;
+    border-radius: 10px ;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: consolas;
+    color: white;
+}
+.login_label{
+    font-size: 1.5rem;
+    font-family: consolas;
+    font-weight: bold;
+}
+.login_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    background-color:white;
+    color: green;
+    font-size: 1rem;
+    font-family: consolas;
+    width: 10rem;
+    height: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px ;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid green;
+}
+.login_button:hover{
+    background-color: green;
+    color: white;
+    
+}
+/* .login_cover{
+    background-color: red;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+    z-index: 1;
+    opacity: 1;
+}
+.hide_login_cover{
+    opacity: 0;
+    top: -120%;
+    height: 0vh;
+    width: 0%;
+} */
+.input_tag{
+    border: 0px;
+    border-bottom: 2px solid green;
+    outline: none;
+    width: 14rem;
+    height: 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: consolas;
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+}
+nav{
+    z-index: 1;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    background-color: rgb(3, 98, 3);
+    width: 100%;
+    height: 10rem;
+}
+nav h2{
+    /* background-color: gray; */
+    position: static;
+    top: 10%;
+    font-size: 3rem;
+    font-family: consolas;
+    font-weight: bold;
+    color: white;
+}
+.menu{
+    display: flex;
+    justify-content: centre;
+    align-items: center;
+    position: sticky;
+    top: 70%;
+    left: 60%;
+    width: 20rem;
+    height: 4rem;
+    /* background-color: blue; */
+}
+.menu ul{
+    width: 20rem;
+    list-style: none;
+    position: relative;
+    /* background-color: red; */
+    display: inline-flex;
+    align-content:right ;
+}
+.menu ul li{
+    padding:0.7rem 0.7rem ;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: consolas;
+    font-weight: bold;
+}
+.menu ul li a:hover{
+    color: rgb(14, 224, 224);
+}
+
+
