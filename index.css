@@ -1,109 +1,125 @@
-.menu_container{
-    position: sticky;
-    color: white;
-    font-size: 2rem;
-    font-family: consolas;
-    font-weight: bold;
-    width: 100%;
-    height: 15rem;
-    /* background-image:linear-gradient(to right,blue,rgb(0, 225, 255)) ; */
-    background-color: green;
-}
-.menu_container h2{
-    padding: 0.1rem 0.5rem;
-    font-size: 3rem;
-    color: white;
-}
-.navigation_button{
-    width: 30rem;
-    position: relative;
-    left: 50%;
-    top: 10%;
-}
-.navigation_button ul{
-    display: inline-flex;
-    list-style-type:none;
-}
-.navigation_button ul li a{
-    padding: 1.5rem 1.5rem;
-    text-decoration: none;
-    color: white;
-}
-.navigation_button ul li a:hover{
-    text-decoration: underline;
-}
-.about_web_page{
-    padding: 0.5rem 0.1rem;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0,255,0,0.3);
-}
-.about_web_page h2{
-    padding: 0.1rem 0.5rem;
-    font-size: 3rem;
-    font-family: consolas;
-    font-weight: bold;
-    color: black;
-}
-.about_web_page p{
-    padding: 0.2rem 0.5rem;
-    font-size: 1.5rem;
-    font-family: consolas;
-}
-.about_web_page ul li{
-    font-size: 1.5rem;
-    font-family: consolas;
-}
-.add_logo{
-    background-image: url('add_button.png');
-    background-size: cover;
-    width: 4rem;
-    height: 4rem;
-    position: relative;
-    left: 20%;
-}
-.about_web_page h4{
-    padding: 0.2rem 0.5rem;
-    font-size: 1.5rem;
-    font-family: consolas;
-}
-.take_attendence{
-    position: relative;
-    left: 40%;
+.loginconatiner{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
+}
+.loginform{
+    background-color:white;
+    width: 18rem;
+    height: 27rem;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 0.5rem 0.5rem;
+
+}
+.hedinglgin{
+    margin-bottom: 1rem;
+    display: flex;
     align-items: center;
-    width: 10rem;
-    height: 4rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: consolas;
+    font-weight: bold;
+    padding: 0.2rem 0.2rem;
     background-color: green;
+    width: 17.5rem;
+    height: 2rem;
     border-radius: 10px;
     color: white;
+}
+.form{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19.5rem;
+    height: 18rem;
+}
+.login_label{
+    font-family: consolas;
+    font-size: 1rem;
+    font-weight:bold;
+}
+.input_tag{
+    font-size: 1rem;
     font-family: consolas;
     font-weight: bold;
+    color: green;
+    border: 0rem;
+    outline: 0rem;
+    border-bottom: 1.5px solid green;
 }
-.contact_details{
-    padding: 0.2rem 0.2rem;
-    margin-top: 1rem;
+.login_button{
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    font-size: 1rem;
+    font-family: consolas;
+    font-weight: bold;
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 10px;
+    border: 2px solid green;
+    cursor: pointer;
+}
+.login_button:hover{
+    background-color: green;
+    color: white;
+}
+nav{
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    background-color: rgb(3, 98, 3);
     width: 100%;
-    height: 20rem;
-    background-color: purple;
+    height: 10rem;
 }
-.contact_details h4{
-    font-size: 2rem;
+nav h2{
+    /* background-color: gray; */
+    position: static;
+    top: 10%;
+    font-size: 3rem;
     font-family: consolas;
     font-weight: bold;
+    color: white;
 }
-.contact_details p a{
+.menu{
+    display: flex;
+    justify-content: centre;
+    align-items: center;
+    position: sticky;
+    top: 70%;
+    left: 60%;
+    width: 20rem;
+    height: 4rem;
+    /* background-color: blue; */
+}
+.menu ul{
+    width: 20rem;
+    list-style: none;
+    position: relative;
+    /* background-color: red; */
+    display: inline-flex;
+    align-content:right ;
+}
+.menu ul li{
+    padding:0.7rem 0.7rem ;
+}
+.menu ul li a{
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     font-family: consolas;
     font-weight: bold;
-}  
-.contact_details p{
-    color: black;
-    /* text-decoration: none; */
-    font-size: 1.5rem;
+}
+.menu ul li a:hover{
+    color: rgb(14, 224, 224);
+}
+.login_text{
+    margin-top: 0.9rem;
+    font-size: 1rem;
     font-family: consolas;
     font-weight: bold;
-}   
+}

@@ -17,7 +17,7 @@ async function fetch_user(){
 
     let put = await fetch('http://localhost:3000/userlogin',get_user);
     put = await put.json();
-    // console.log(put.message);
+    console.log(put.message);
 
     if(put.message == 'Ivalid user'){
         alert('Invalid User_Details');

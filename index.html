@@ -3,46 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Login</title>
     <link rel="stylesheet" href="index.css">
-    <title>Home</title>
 </head>
 <body>
-    <div class="menu_container">
-        <h2>Attendence Service App</h2>
-        <div class="navigation_button">
+<!-- sign in  page -->
+    <!-- <nav>
+        <h2>Sign Up</h2>
+        <div class="menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="signup.html">Register</a></li>
                 <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign up</a></li>
             </ul>
         </div>
-    </div>
-    <div class="about_web_page">
-        <h2>Why you need this ?</h2>
-        <p>With a web-based employee attendance software that tracks, collects, stores, and displays up-to-date, timesheets, HR leaders can get rid of spreadsheets and paper files.</p>
-        <p>Storing employee timesheets and attendance details in a centralized cloud-based attendance management system will:
-            <ul>
-                <li>Increase accuracy</li>
-                <li>Ensure data integrity</li>
-                <li>Improve employee productivity</li>
-                <li>Reduce administrative work</li>
-                <li>Lower admin costs and</li>
-                <li>Enhance the efficiency of HR staff</li>
-            </ul>
-        </p>
-        <!-- <h2>Create Your group</h2>
-        <h4>Byy clicking on that image</h4>
-        <div class="add_logo"></div>
+    </nav> -->
+    <div class="loginconatiner">
+   <div class="loginform">
+        <div class="hedinglgin">Register User form</div>
+        <div class="form">
+            <form action="/register/user" method="POST">
+                <label class="login_label">Frist Name</label><br>
+                <input  class="input_tag" type="text" id="frist_name" required ><br><br>
 
-        <h2>Take Attendence by clicking on the Take attendnce button</h2>
-        <div class="take_attendence">Take attendence</div> -->
+                <label class="login_label">Last Name</label><br>
+                <input class="input_tag" type="text" id="last_name" required ><br><br>
+
+                <label class="login_label">Email</label><br>
+                <input class="input_tag" type="email" id="email" required ><br><br>
+                
+                <label class="login_label">Password</label><br>
+                <input class="input_tag" type="password" id="password" required ><br><br>
+
+                <label class="login_label">Confirm Password</label><br>
+                <input class="input_tag" type="password" id="confpassword" required ><br>
+                
+                <br>
+            </form>
+            
+        </div>
+        <div class="login_button" onclick="take_data()">Register</div>
+        <div class="login_text">Already have account <a href="login.html">Login</a></div>
+        
     </div>
-    <div class="contact_details">
-        <h4>Contact Developer</h4>
-        <p>Gmail: <a href="ankitsharmapac123@gmail.com">Email_me</a></p>
-        <p>linkedIn: <a href="https://www.linkedin.com/in/ankit-sharma-39a31927b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">View_my_linked_in_profile</a></p>
-    </div>
-    
+</div>
+
+    <!-- <div class="notification" id="login_page"></div> -->
+<!-- login page end -->
     <script src="index.js"></script>
 </body>
 </html>

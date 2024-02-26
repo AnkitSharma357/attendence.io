@@ -13,7 +13,7 @@
         </div>
         <div class="attendence_data_Container"></div>
         <div class="submit_container">
-            <div class="submit_button">Submit</div>
+            <div class="submit_button" onclick="submitAttendnece()">Submit</div>
             <div class="add_icon" onclick="show_add_person_dailog_box()"></div>
         </div>
     </div>
@@ -36,6 +36,35 @@
             <div class="add_button" onclick="put_person_details()">+ADD</div>
         </div>
     </div>
+
+    <div class="cover_persona_data"></div>
+        <div class="update_person_dailog_box">
+            <div class="heading">Up Date Member
+                <div class="update_cross_image" onclick="hide_update_person_dailog_box()"></div>
+            </div>
+            <div class="take_person_details">
+                <!-- <label>Name</label> -->
+                <input type="text" placeholder="name" class="person_details" id="update_person_name" required><br>
+                <!-- <label>Phone</label> -->
+                <input type="number" placeholder="phone_no" class="person_details" id="update_person_phone_no" required><br>
+                <!-- <label>Address</label> -->
+                <input type="text" placeholder="address" class="person_details" id="update_person_address"><br><br>
+                <textarea id="update_person_commnets" cols="20" rows="5" placeholder="write comments here" class="textarea"></textarea>
+            </div>
+            <div class="button">
+                <div class="update_button" onclick="update_person()">Update</div>
+                <div class="delete_button" onclick="delete_person()">Delete</div>
+            </div>
+        </div>
+
+        <div class="delete_conformation">
+            <div class="caution_sign"></div>
+            <div class="delete_warning">Data of the person is permanently delete.</div>
+            <div class="yes_no_container">
+                <div class="yes" onclick="removeperson()">Yes</div>
+                <div class="no" onclick="removedailogbox()">No</div>
+            </div>
+        </div>
     <script src="take_attendence.js"></script>
 </body>
 </html>

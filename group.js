@@ -153,4 +153,9 @@ function remove_add_dailog_box(){
     document.querySelector('.add_group_cover').classList.remove('show_add_group_cover');
 }
 
+function logout(){
+    alert('Logout successfully');
+    window.open('login.html','_self');
+}
+
 fetch_Group_data();
