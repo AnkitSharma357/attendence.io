@@ -1,12 +1,12 @@
 async function fetch_Group_data(){
-    let result = await fetch('http://localhost:3000/data',{method:'GET'});
+    let result = await fetch('https://attendenceserviceapp.cyclic.app/data',{method:'GET'});
     result = await result.json();
     create_group_information_div(result);
 
 }
 
 function create_group_information_div(result)
-{   console.log(result);
+{
     for(let i=0;i<=result.length;i++)
     {
         
@@ -74,8 +74,7 @@ function create_group_information_div(result)
                             group_name:without_Space_name
                         })
                     }
-                    let del_group = await fetch('http://localhost:3000/deletegroup',group_id);
-                    console.log(del_group);
+                    let del_group = await fetch('https://attendenceserviceapp.cyclic.app/deletegroup',group_id);
                     document.querySelector('.delete_group_cover').classList.remove('show_delete_group_cover');
                     location.reload();
                 }
@@ -94,7 +93,6 @@ function create_group_information_div(result)
         //take attendence button function
         take_attendence.onclick = async function goto_attendence(){
             let group_name = document.getElementById(grp_information.id).querySelector('.grp_name').innerText;
-            console.log(group_name);
             let without_Space_name = group_name.split(" ").join("");
             let group_obj={
                 method:'POST',
@@ -106,8 +104,7 @@ function create_group_information_div(result)
                 })
             }
             
-            let post_group_name = await fetch('http://localhost:3000/postgroupname',group_obj);
-            console.log(post_group_name);
+            let post_group_name = await fetch('https://attendenceserviceapp.cyclic.app/postgroupname',group_obj);
             window.open('Take_attendence.html','_self');   
         };
         //take attendence button function finish
@@ -128,7 +125,6 @@ function create_group_information_div(result)
 async function add_group(){
     let group_name = document.querySelector('#group_name').value;
     let without_Space_name = group_name.split(" ").join("");
-    console.log(group_name);
     let group_obj={
         method:'POST',
         headers: {
@@ -140,7 +136,7 @@ async function add_group(){
         })
     }
 
-    let created_group = await fetch('http://localhost:3000/addgroup',group_obj);
+    let created_group = await fetch('https://attendenceserviceapp.cyclic.app/addgroup',group_obj);
     document.querySelector('.add_group_cover').classList.remove('show_add_group_cover');
     location.reload();
 }

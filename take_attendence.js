@@ -1,9 +1,8 @@
 var result;
 var person_id;
 async function fetchperticulargroup(){
-    let data = await fetch('http://localhost:3000/tabledata',{method:'GET'});
+    let data = await fetch('https://attendenceserviceapp.cyclic.app/tabledata',{method:'GET'});
     data = await data.json();
-    console.log(data);
     result = data;
     dataLenght = data.length;
     create_div_for_attendence(data);
@@ -96,7 +95,6 @@ async function put_person_details(){
     let phone_number = document.querySelector('#phone_no').value;
     let address = document.querySelector('#address').value;
     let comments = document.querySelector('#commnets').value;
-    console.log(name,phone_number,address,comments);
     let person_details = {
         method:'POST',
          headers: {
@@ -109,9 +107,8 @@ async function put_person_details(){
             comments: comments,
         })
     }
-    let data = await fetch('http://localhost:3000/postpersondetails',person_details);
+    let data = await fetch('https://attendenceserviceapp.cyclic.app/postpersondetails',person_details);
     data = await data.json();
-    console.log(data);
     document.querySelector('.add_person_cover').classList.remove('show_add_person_cover');
     document.querySelector('.add_person_dailog_box').classList.remove('show_person_dailog_box');
     location.reload();
@@ -148,7 +145,7 @@ async function submitAttendnece(){
         })
     }
 
-    let sendattendence =  await fetch('http://localhost:3000/attendencedata',obj);
+    let sendattendence =  await fetch('https://attendenceserviceapp.cyclic.app/attendencedata',obj);
     sendattendence = await sendattendence.json();
 
     if(sendattendence.query == 'ok'){
@@ -190,7 +187,7 @@ async function update_person(){
        })
     }
 
-    let sendupdate = await fetch('http://localhost:3000/updateperson',obj);
+    let sendupdate = await fetch('https://attendenceserviceapp.cyclic.app/updateperson',obj);
     sendupdate = await sendupdate.json();
     if(sendupdate.message == "updated"){
         alert('Person Updated Successufully');
@@ -252,9 +249,8 @@ async function removeperson(){
        })
     }
 
-    let delete_person = await fetch('http://localhost:3000/deleteuserformgroup',obj);
+    let delete_person = await fetch('https://attendenceserviceapp.cyclic.app/deleteuserformgroup',obj);
     delete_person = await delete_person.json();
-    console.log(delete_person);
 
     if(delete_person.message == "delete"){
         alert('person deleted succesfully');

@@ -5,12 +5,6 @@ function take_data(){
     let password = document.querySelector('#password').value;
     let confpassword = document.querySelector('#confpassword').value;
 
-    console.log(fristname);
-    console.log(lastname);
-    console.log(email);
-    console.log(password);
-    console.log(confpassword);
-
     if(password !== confpassword){
         alert("password and confrom password does not match");
     }
@@ -34,9 +28,8 @@ async function postdata(fristname,lastname,email,password){
         })
     }
 
-    let response = await fetch('http://localhost:3000/register/user',obj);
+    let response = await fetch('https://attendenceserviceapp.cyclic.app/register/user',obj);
     response = await response.json();
-    console.log(response);
 
     if(response.message == 'true'){
         alert('user register successfully');
