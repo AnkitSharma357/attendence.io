@@ -41,6 +41,7 @@ let commnets;
         absent_present_container.onclick = function putattendence(){
             let text = document.getElementById(person_data.id).querySelector('.absent_present_container').innerHTML
             document.querySelector('.submit_button').classList.add('show_submit_button');
+            document.querySelector('.add_icon').classList.add('display_add_icon');
             if(text == 'Absent'){
                 absent_present_container.removeChild(absent_text);
                 absent_present_container.appendChild(Present_text);

@@ -1,332 +1,679 @@
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media only screen and (max-width:900px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .group_container_cover{
+        padding: 0.1rem 0.5rem;
+        background-color: white;
+        min-width: 23rem;
+        min-height: 45rem;
+        border-radius:10px ;
+        border: 2px solid gray;
+    }
+    .group_add_button{
+        background-image: url('add_button.png');
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        position: sticky;
+        margin-top: 10px;
+        margin-left: 80%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .group_heading{
+        display: flex;
+        align-items: center;
+        background-color: green;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 10px;
+        width: 22rem;
+        height: 5rem;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 3rem;
+        color: white;
+    }
+    .logout_image{
+        width: 4rem;
+        height: 4rem;
+        background-image: url('logout4.webp');
+        background-size: cover;
+        border-radius: 51%;
+        margin-left: 40%;
+        cursor: pointer;
+    }
+    .all_group_container{
+        /* background-color: red; */
+        margin-top: 0.1rem;
+        width: 23rem;
+        height: 40rem;
+        border-radius: 10px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    .group_information{
+        background-color: white;
+        margin-left: 0.15rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.1rem;
+        width: 22.5rem;
+        height: 9rem;
+        border-radius: 10px;
+        border: 2px solid gray;
+    }
+    .delete_button{
+        position: relative;
+        left: 90%;
+        top: 5%;
+        background-image: url('delete.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+    .grp_name{
+        margin-left: 0.5rem;
+        font: 2rem consolas ;
+        font-weight: bold;
+    }
+    .percentage{
+        margin-left: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: bold;
+        font-family: consolas;
+        color: gray;
+    }
+    .take_attendence{
+        position: relative;
+        left: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid rgb(5, 103, 5);
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+    .take_attendence:hover{
+        background-color: rgb(5, 103, 5);
+        color: white;
+    }
+    .delete_conformation{
+        /* background-color: red; */
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 0.5rem;
+        width: 20rem;
+        height: 4rem;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .delete_group_choise{
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 22rem;
+        height: 20rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .caution{
+        position: relative;
+        left: 35%;
+        margin-top: 0.5rem;
+        background-color: brown;
+        background-image: url('caution.jpg');
+        background-size: cover;
+        width: 6rem;
+        height: 6rem;
+    }
+    .delete_group_cover{
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_delete_group_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    
+    }
+    .yesnocontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: blue; */
+        width: 100%;
+        height: 6rem;
+    }
+    .yes_bttn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid green;
+        font-family: consolas;
+        font-weight: bold;
+        width: 8rem;
+        height: 3rem;
+        position: relative;
+        left: -4%;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: green;
+        font-size: 1.5rem;
+    }
+    .no_buttn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid green;
+        font-family: consolas;
+        font-weight: bold;
+        width: 8rem;
+        height: 3rem;
+        position: relative;
+        left: 4%;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: green;
+        font-size: 1.5rem;
+    }
+    .yes_bttn:hover, .no_buttn:hover{
+        background-color: green;
+        color: white;
+    }
+    .add_group_cover{
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_add_group_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .add_group_dailog_box{
+        border-radius: 10px;
+        background-color: white;
+        width: 20rem;
+        height: 18rem;
+        position: fixed;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-20%);
+        border: 2px solid gray;
+    }
+    .add_group_heading{
+        padding: 0.5rem 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        width: 18rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .close_button{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 45%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .get-group_information{
+        margin-left: 0.5rem;
+        width: 18rem;
+        height: 10rem;
+        padding: 0.5rem 0.5rem;
+    }
+    label{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .goup_name{
+        border-radius: 10px;
+        padding: 0.2rem 0.2rem;
+        width: 10rem;
+        height: 1rem;
+        font-family: consolas;
+    }
+    .add_button{
+        position: absolute;
+        left: 12%;
+        top: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        width: 15rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .add_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .notifictation_panel{
+        display: flex;
+        align-items: center;
+        padding: 0.3rem 0.3rem;
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform: translate(-50% ,-50%);
+        background: white;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        width: 20rem;
+        min-height: 3rem;
+        opacity: 0;
+        z-index: -1;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .show_notification_panel{
+        top: 10%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .server_error{
+        border: 2px solid red;
+    }
+    .cross_image{
+        background-image: url('error.webp');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+    .tick_image{
+        background-image: url('tick.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+    .server_resopnse{
+        border: 2px solid green;
+    }
+    
 }
-.group_container_cover{
-    padding: 0.1rem 0.5rem;
-    background-color: white;
-    min-width: 20rem;
-    min-height: 30rem;
-    border-radius:10px ;
-    border: 2px solid gray;
-}
-.group_add_button{
-    background-image: url('add_button.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    position: sticky;
-    margin-top: 10px;
-    margin-left: 85%;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.group_heading{
-    display: flex;
-    align-items: center;
-    background-color: green;
-    margin-left: 0.2rem;
-    margin-top: 0.5rem;
-    padding-left: 0.5rem;
-    border-radius: 10px;
-    width: 19rem;
-    height: 4rem;
-    font-family: consolas;
-    font-weight: bold;
-    font-size: 1.5rem;
-    color: white;
-}
-.logout_image{
-    width: 2rem;
-    height: 2rem;
-    background-image: url('logout4.webp');
-    background-size: cover;
-    border-radius: 51%;
-    margin-left: 65%;
-    cursor: pointer;
-}
-.all_group_container{
-    margin-top: 0.1rem;
-    width: 20rem;
-    height: 25rem;
-    border-radius: 10px;
-    overflow-y: auto;
-    scrollbar-width: none;
-}
-.group_information{
-    background-color: white;
-    margin-left: 0.15rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.1rem;
-    width: 19.5rem;
-    height: auto;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-.delete_button{
-    position: relative;
-    left: 90%;
-    top: 5%;
-    background-image: url('delete.png');
-    background-size: cover;
-    width: 1.5rem;
-    height: 1.5rem;
-    cursor: pointer;
-}
-.grp_name{
-    margin-left: 0.5rem;
-    font: 1.5rem consolas ;
-    font-weight: bold;
-}
-.percentage{
-    margin-left: 0.5rem;
-    font-size: 0.7rem;
-    font-weight: bold;
-    font-family: consolas;
-    color: gray;
-}
-.take_attendence{
-    position: relative;
-    left: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid rgb(5, 103, 5);
-    width: 10rem;
-    height: 2rem;
-    font-size: 1rem;
-    font-family: consolas;
-    font-weight: bold;
-    color: green;
-    cursor: pointer;
-    margin-bottom: 0.5rem;
-}
-.take_attendence:hover{
-    background-color: rgb(5, 103, 5);
-    color: white;
-}
-.delete_conformation{
-    padding: 0.5rem 0.5rem;
-    width: 15rem;
-    height: 2rem;
-    font-family: consolas;
-    font-weight: bold;
-}
-.delete_group_choise{
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 10px;
-    width: 15rem;
-    height: 12rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-.caution{
-    position: relative;
-    left: 40%;
-    margin-top: 0.5rem;
-    background-color: brown;
-    background-image: url('caution.jpg');
-    background-size: cover;
-    width: 3rem;
-    height: 3rem;
-}
-.delete_group_cover{
-    position: absolute;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    z-index: -1;
-}
-.show_delete_group_cover{
-    top: 0%;
-    opacity: 1;
-    z-index: 1;
 
-}
-.yesnocontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-    width: 100%;
-    height: 4rem;
-}
-.yes_bttn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid green;
-    font-family: consolas;
-    font-weight: bold;
-    width: 5rem;
-    height: 2rem;
-    position: relative;
-    left: -5%;
-    margin-top: 1rem;
-    cursor: pointer;
-    color: green;
-}
-.no_buttn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    border: 2px solid green;
-    font-family: consolas;
-    font-weight: bold;
-    width: 5rem;
-    height: 2rem;
-    position: relative;
-    left: 5%;
-    margin-top: 1rem;
-    cursor: pointer;
-    color: green;
-}
-.yes_bttn:hover, .no_buttn:hover{
-    background-color: green;
-    color: white;
-}
-.add_group_cover{
-    position: absolute;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    z-index: -1;
-}
-.show_add_group_cover{
-    top: 0%;
-    opacity: 1;
-    z-index: 1;
-}
-.add_group_dailog_box{
-    border-radius: 10px;
-    background-color: white;
-    width: 20rem;
-    height: 18rem;
-    position: fixed;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%,-20%);
-    border: 2px solid gray;
-}
-.add_group_heading{
-    padding: 0.5rem 0.5rem;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    background-color: green;
-    color: white;
-    width: 18rem;
-    height: 2.5rem;
-    border-radius: 10px;
-    font-family: consolas;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.close_button{
-    background-image: url('cross.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 45%;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.get-group_information{
-    margin-left: 0.5rem;
-    width: 18rem;
-    height: 10rem;
-    padding: 0.5rem 0.5rem;
-}
-label{
-    font-size: 1.5rem;
-    font-family: consolas;
-    font-weight: bold;
-}
-.goup_name{
-    border-radius: 10px;
-    padding: 0.2rem 0.2rem;
-    width: 10rem;
-    height: 1rem;
-    font-family: consolas;
-}
-.add_button{
-    position: absolute;
-    left: 12%;
-    top: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid green;
-    border-radius: 10px;
-    color: green;
-    width: 15rem;
-    height: 2rem;
-    font-family: consolas;
-    font-weight: bold;
-    cursor: pointer;
-}
-.add_button:hover{
-    background-color: green;
-    color: white;
-}
-.notifictation_panel{
-    display: flex;
-    align-items: center;
-    padding: 0.3rem 0.3rem;
-    position: absolute;
-    left: 50%;
-    top: -100%;
-    transform: translate(-50% ,-50%);
-    background: white;
-    border: 2px solid green;
-    border-radius: 10px;
-    color: green;
-    width: 20rem;
-    min-height: 3rem;
-    opacity: 0;
-    z-index: -1;
-    font-family: consolas;
-    font-weight: bold;
-}
-.show_notification_panel{
-    top: 10%;
-    opacity: 1;
-    z-index: 1;
-}
-.server_error{
-    border: 2px solid red;
-}
-.cross_image{
-    background-image: url('error.webp');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-radius: 50%;
-}
-.tick_image{
-    background-image: url('tick.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-radius: 50%;
-}
-.server_resopnse{
-    border: 2px solid green;
+@media only screen and (min-width:901px) and (max-width:1024px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .group_container_cover{
+        padding: 0.1rem 0.5rem;
+        background-color: white;
+        min-width: 20rem;
+        min-height: 30rem;
+        border-radius:10px ;
+        border: 2px solid gray;
+    }
+    .group_add_button{
+        background-image: url('add_button.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        position: sticky;
+        margin-top: 10px;
+        margin-left: 85%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .group_heading{
+        display: flex;
+        align-items: center;
+        background-color: green;
+        margin-left: 0.2rem;
+        margin-top: 0.5rem;
+        padding-left: 0.5rem;
+        border-radius: 10px;
+        width: 19rem;
+        height: 4rem;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+    }
+    .logout_image{
+        width: 2rem;
+        height: 2rem;
+        background-image: url('logout4.webp');
+        background-size: cover;
+        border-radius: 51%;
+        margin-left: 65%;
+        cursor: pointer;
+    }
+    .all_group_container{
+        margin-top: 0.1rem;
+        width: 20rem;
+        height: 25rem;
+        border-radius: 10px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    .group_information{
+        background-color: white;
+        margin-left: 0.15rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.1rem;
+        width: 19.5rem;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid gray;
+    }
+    .delete_button{
+        position: relative;
+        left: 90%;
+        top: 5%;
+        background-image: url('delete.png');
+        background-size: cover;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+    .grp_name{
+        margin-left: 0.5rem;
+        font: 1.5rem consolas ;
+        font-weight: bold;
+    }
+    .percentage{
+        margin-left: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: bold;
+        font-family: consolas;
+        color: gray;
+    }
+    .take_attendence{
+        position: relative;
+        left: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid rgb(5, 103, 5);
+        width: 10rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+    .take_attendence:hover{
+        background-color: rgb(5, 103, 5);
+        color: white;
+    }
+    .delete_conformation{
+        padding: 0.5rem 0.5rem;
+        width: 15rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .delete_group_choise{
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 15rem;
+        height: 12rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .caution{
+        position: relative;
+        left: 40%;
+        margin-top: 0.5rem;
+        background-color: brown;
+        background-image: url('caution.jpg');
+        background-size: cover;
+        width: 3rem;
+        height: 3rem;
+    }
+    .delete_group_cover{
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_delete_group_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    
+    }
+    .yesnocontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        width: 100%;
+        height: 4rem;
+    }
+    .yes_bttn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid green;
+        font-family: consolas;
+        font-weight: bold;
+        width: 5rem;
+        height: 2rem;
+        position: relative;
+        left: -5%;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: green;
+    }
+    .no_buttn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        border: 2px solid green;
+        font-family: consolas;
+        font-weight: bold;
+        width: 5rem;
+        height: 2rem;
+        position: relative;
+        left: 5%;
+        margin-top: 1rem;
+        cursor: pointer;
+        color: green;
+    }
+    .yes_bttn:hover, .no_buttn:hover{
+        background-color: green;
+        color: white;
+    }
+    .add_group_cover{
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_add_group_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .add_group_dailog_box{
+        border-radius: 10px;
+        background-color: white;
+        width: 20rem;
+        height: 18rem;
+        position: fixed;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%,-20%);
+        border: 2px solid gray;
+    }
+    .add_group_heading{
+        padding: 0.5rem 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        width: 18rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .close_button{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 45%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .get-group_information{
+        margin-left: 0.5rem;
+        width: 18rem;
+        height: 10rem;
+        padding: 0.5rem 0.5rem;
+    }
+    label{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .goup_name{
+        border-radius: 10px;
+        padding: 0.2rem 0.2rem;
+        width: 10rem;
+        height: 1rem;
+        font-family: consolas;
+    }
+    .add_button{
+        position: absolute;
+        left: 12%;
+        top: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        width: 15rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .add_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .notifictation_panel{
+        display: flex;
+        align-items: center;
+        padding: 0.3rem 0.3rem;
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform: translate(-50% ,-50%);
+        background: white;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        width: 20rem;
+        min-height: 3rem;
+        opacity: 0;
+        z-index: -1;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .show_notification_panel{
+        top: 10%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .server_error{
+        border: 2px solid red;
+    }
+    .cross_image{
+        background-image: url('error.webp');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+    .tick_image{
+        background-image: url('tick.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 50%;
+    }
+    .server_resopnse{
+        border: 2px solid green;
+    }
+    
 }

@@ -2,402 +2,827 @@ body{
     display: flex;
     justify-content: center;
 }
-.attendence_container{
-    background-color: white;
-    width: 20rem;
-    height: 30rem;
-    border-radius: 10px;
-    border: 2px solid gray;
-    padding: 0.5rem 0.5rem;
+@media only screen and (max-width:900px){
+    .attendence_container{
+        background-color: white;
+        width: 23rem;
+        height: 47rem;
+        border-radius: 10px;
+        border: 2px solid gray;
+        padding: 0.5rem 0.5rem;
+    
+    }
+    .conatiner_heading{
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        height: 5rem;
+        font-family: consolas;
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        font-size: 2.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+    .back_image{
+        background-image: url('back.jpg');
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        left: 20%;
+        border-radius: 50%;
+        cursor: pointer;
+        
+    }
+    .attendence_data_Container{
+        /* background-color: red; */
+        width: 23rem;
+        height: 35rem;
+        border-radius: 10px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    .add_icon{
+        margin-top: 0.5rem;
+        background-image: url('add_button.png');
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        top: 3%;
+        left: 45%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .display_add_icon{
+        left: 15%;
+    }
+    .person_data{
+        padding: 0.5rem 0.2rem;
+        display: flex;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 21.5rem;
+        height: 4rem;
+        margin-left: 0.4rem;
+        margin-top: 0.3rem;
+    }
+    .person_data:hover{
+        cursor: pointer;
+        border: 2px solid rgb(4, 62, 4);
+    }
+    .person_name_container{
+        /* background-color: blue; */
+        margin-top: -0.2rem;
+        display: flex;
+        align-items: center;
+        width: 11rem;
+        height: 4rem;
+        font-family: consolas;
+        font-size: 1.5rem;
+        font-weight: bold;
+        overflow-x: auto;
+        scrollbar-width: none;
+        border-radius: 10px;
+        padding: 0.2rem 0.2rem;
+    }
+    .call_image{
+        background-image: url('call2.png');
+        background-size: cover;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        left: -130%;
+    }
+    .absent_present_container{
+        position: relative;
+        left: 4%;
+        background-color: rgba(255, 0, 0, 0.3);
+        width: 6rem;
+        height: 4rem;
+        border-radius: 10px;
+        border: 2px solid red;
+        color: red;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .present_text{
+        border: 2px solid green;
+        color: green;
+        background-color: rgba(0, 255, 0, 0.3);
+    }
+    .phone_nmber{
+        position: relative;
+        left: 20%;
+    }
+    .add_person_cover{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100%;
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_add_person_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .add_person_dailog_box{
+        top: -100%;
+        position: fixed;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 23rem;
+        height: 30rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .show_person_dailog_box{
+        top: 10%;
+    }
+    .heading{
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        width: 22rem;
+        height: 4rem;
+        border-radius: 10px;
+    }
+    .cross_image{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        left: 25%;
+        border-radius: 60%;
+        cursor: pointer;
+    }
+    .take_person_details{
+        margin-top: 0.5rem;
+        /* background-color: red; */
+        padding: 0.5rem 0.5rem;
+        align-items: center;
+    }
+    .person_details{
+        background: transparent;
+        border: 0rem;
+        outline: 0rem;
+        border-bottom: 1.5px solid green;
+        width: 20rem;
+        height: 3rem;
+        font-family: consolas;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .textarea{
+        outline: 0rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+        width: 19rem;
+        margin-left: 0.3rem;
+        font-size: 1rem
+    }
+    .add_button{
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22rem;
+        height: 4rem;
+        background-color: white;
+        color: green;
+        font-family: consolas;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    .add_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .submit_container{
+        display: flex;
+        align-items: center;
+    }
+    .submit_button{
+        margin-top: 0.5rem;
+        display: none;
+        width: 15rem;
+        height: 3.5rem;
+        cursor: pointer;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 2rem;
+        /* display: none; */
+    }
+    .show_submit_button{  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .cover_persona_data{
+        position: absolute;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .show_cover_person_data{
+        top: 0%;
+        opacity: 1;
+        /* z-index: 1; */
+    }
+    .update_person_dailog_box{
+        top: -150%;
+        position: fixed;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 23rem;
+        height: 30rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .show_update_person_dailog_box{
+        top: 10%;
+    }
+    .update_cross_image{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        left: 15%;
+        border-radius: 60%;
+        cursor: pointer;
+    }
+    .button{
+        /* background-color: blue; */
+        display: flex;
+        width: 23rem;
+        height: 5rem;
+    }
+    .update_button{
+        border-radius: 10px;
+        width: 10rem;
+        height: 4rem;
+        position: relative;
+        left: 55%;
+        border: 2px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: green;
+    }
+    .update_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .delete_button{
+        border-radius: 10px;
+        position: relative;
+        left: -43%;
+        width: 10rem;
+        height: 4rem;
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: red;
+    }
+    .delete_button:hover{
+        background-color: red;
+        color: white;
+    }
+    .delete_conformation{
+        box-shadow: 0 1rem 1rem 0 rgba(255, 0, 0, 0.325), 0 1rem 1rem 0 rgba(255, 0, 0, 0.325);
+        padding: 0.5rem 0.5rem;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform:translate(-50%,-80%) ;
+        width: 22rem;
+        height: 17rem;
+        border-radius: 10px ;
+        border: 2px solid red;
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_delete_conformation{
+        top: 50%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .delete_warning{
+        /* background-color: blue; */
+        padding: 0.2rem 0.5rem;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: red;
+    }
+    .caution_sign{
+        background-color: red;
+        background-image: url('caution.jpg');
+        background-size: cover;
+        width: 7rem;
+        height: 7rem;
+        margin-left:7.5rem ;
+        margin-bottom: 0.1rem;
+    }
+    .yes_no_container{
+        /* background-color: blue; */
+        margin-top: 1rem;
+        width: 22rem;
+        display: flex;
+        font-family: consolas;
+        font-weight: bold;
+        
+    }
+    .yes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 4rem;
+        border-radius: 10px;
+        border: 2px solid red;
+        margin-left: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: red;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    .yes:hover{
+        background-color: red;
+        color: white;
+    }
+    .no{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        width: 7rem;
+        height: 4rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        margin-left: 3.5rem;
+        color: green;
+        cursor: pointer;
+    }
+    .no:hover{
+        background-color: green;
+        color: white;
+    }
 
 }
-.conatiner_heading{
-    display: flex;
-    align-items: center;
-    background-color: green;
-    color: white;
-    height: 3rem;
-    font-family: consolas;
-    font-weight: bold;
-    padding: 0.5rem 0.5rem;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
-}
-.back_image{
-    background-image: url('back.jpg');
-    background-size: cover;
-    width: 2.5rem;
-    height: 2.5rem;
-    position: relative;
-    left: 40%;
-    border-radius: 50%;
-    cursor: pointer;
+
+@media only screen and (min-width:901px) and (max-width:1024px){
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: red;
+    }
+    .attendence_container{
+        background-color: white;
+        width: 20rem;
+        height: 30rem;
+        border-radius: 10px;
+        border: 2px solid gray;
+        padding: 0.5rem 0.5rem;
     
-}
-.attendence_data_Container{
-    width: 20rem;
-    height: 22rem;
-    border-radius: 10px;
-    overflow-y: auto;
-    scrollbar-width: none;
-}
-.add_icon{
-    margin-top: 0.5rem;
-    background-image: url('add_button.png');
-    background-size: cover;
-    width: 2.5rem;
-    height: 2.5rem;
-    position: relative;
-    top: 3%;
-    left: 45%;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.person_data{
-    padding: 0.5rem 0.2rem;
-    display: flex;
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 10px;
-    width: 19rem;
-    height: 2rem;
-    margin-left: 0.4rem;
-    margin-top: 0.3rem;
-}
-.person_data:hover{
-    cursor: pointer;
-    border: 2px solid rgb(4, 62, 4);
-}
-.person_name_container{
-    margin-top: -0.2rem;
-    display: flex;
-    align-items: center;
-    width: 9rem;
-    height: 2rem;
-    font-family: consolas;
-    font-size: 1rem;
-    font-weight: bold;
-    overflow-x: auto;
-    scrollbar-width: none;
-    border-radius: 10px;
-    padding: 0.2rem 0.2rem;
-}
-.call_image{
-    background-image: url('call2.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-    left: -130%;
-}
-.absent_present_container{
-    position: relative;
-    left: 12%;
-    background-color: rgba(255, 0, 0, 0.3);
-    width: 5rem;
-    height: 2rem;
-    border-radius: 10px;
-    border: 2px solid red;
-    color: red;
-    font-family: consolas;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.present_text{
-    border: 2px solid green;
-    color: green;
-    background-color: rgba(0, 255, 0, 0.3);
-}
-.phone_nmber{
-    position: relative;
-    left: 20%;
-}
-.add_person_cover{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -100%;
-    opacity: 0;
-    z-index: -1;
-}
-.show_add_person_cover{
-    top: 0%;
-    opacity: 1;
-    z-index: 1;
-}
-.add_person_dailog_box{
-    top: -100%;
-    position: fixed;
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 10px;
-    width: 20rem;
-    height: 21rem;
-    padding: 0.5rem 0.5rem;
-}
-.show_person_dailog_box{
-    top: 10%;
-}
-.heading{
-    padding: 0.5rem 0.5rem;
-    display: flex;
-    align-items: center;
-    background-color: green;
-    color: white;
-    font-size: 1.5rem;
-    font-family: consolas;
-    font-weight: bold;
-    width: 19rem;
-    height: 2rem;
-    border-radius: 10px;
-}
-.cross_image{
-    background-image: url('cross.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    left: 40%;
-    border-radius: 60%;
-    cursor: pointer;
-}
-.take_person_details{
-    padding: 0.5rem 0.5rem;
-    align-items: center;
-}
-.person_details{
-    background: transparent;
-    border: 0rem;
-    outline: 0rem;
-    border-bottom: 1.5px solid green;
-    width: 15rem;
-    height: 2rem;
-    font-family: consolas;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-.textarea{
-    outline: 0rem;
-    border-radius: 10px;
-    border: 2px solid green;
-    padding: 0.5rem 0.5rem;
-    cursor: pointer;
-    width: 17rem;
-    margin-left: 0.3rem;
-}
-.add_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 19.5rem;
-    height: 2rem;
-    background-color: white;
-    color: green;
-    font-family: consolas;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid green;
-    cursor: pointer;
-}
-.add_button:hover{
-    background-color: green;
-    color: white;
-}
-.submit_container{
-    display: flex;
-    align-items: center;
-}
-.submit_button{
-    margin-top: 0.5rem;
-    display: none;
-    width: 8rem;
-    height: 2.5rem;
-    cursor: pointer;
-    border: 2px solid green;
-    border-radius: 10px;
-    color: green;
-    font-family: consolas;
-    font-weight: bold;
-    font-size: 1.3rem;
-    /* display: none; */
-}
-.show_submit_button{  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.submit_button:hover{
-    background-color: green;
-    color: white;
-}
-.cover_persona_data{
-    position: absolute;
-    top: -150%;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-}
-.show_cover_person_data{
-    top: 0%;
-    opacity: 1;
-    /* z-index: 1; */
-}
-.update_person_dailog_box{
-    top: -100%;
-    position: fixed;
-    background-color: white;
-    border: 2px solid gray;
-    border-radius: 10px;
-    width: 20rem;
-    height: 21rem;
-    padding: 0.5rem 0.5rem;
-}
-.show_update_person_dailog_box{
-    top: 10%;
-}
-.update_cross_image{
-    background-image: url('cross.png');
-    background-size: cover;
-    width: 2rem;
-    height: 2rem;
-    position: relative;
-    left: 30%;
-    border-radius: 60%;
-    cursor: pointer;
-}
-.button{
-    display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    width: 19rem;
-    height: 3rem;
-    /* border: 2px solid gray; */
-}
-.update_button{
-    border-radius: 10px;
-    width: 7rem;
-    height: 2.5rem;
-    position: relative;
-    left: 60%;
-    border: 2px solid green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: consolas;
-    font-weight: bold;
-    cursor: pointer;
-    color: green;
-}
-.update_button:hover{
-    background-color: green;
-    color: white;
-}
-.delete_button{
-    border-radius: 10px;
-    position: relative;
-    left: -30%;
-    width: 7rem;
-    height: 2.5rem;
-    border: 2px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: consolas;
-    font-weight: bold;
-    cursor: pointer;
-    color: red;
-}
-.delete_button:hover{
-    background-color: red;
-    color: white;
-}
-.delete_conformation{
-    box-shadow: 0 1rem 1rem 0 rgba(255, 0, 0, 0.325), 0 1rem 1rem 0 rgba(255, 0, 0, 0.325);
-    padding: 0.5rem 0.5rem;
-    background-color: white;
-    position: absolute;
-    left: 50%;
-    top: -100%;
-    transform:translate(-50%,-80%) ;
-    width: 15rem;
-    height: 10rem;
-    border-radius: 10px ;
-    border: 2px solid red;
-    opacity: 0;
-    z-index: -1;
-}
-.show_delete_conformation{
-    top: 50%;
-    opacity: 1;
-    z-index: 1;
-}
-.delete_warning{
-    padding: 0.2rem 0.5rem;
-    font-size: 1rem;
-    font-family: consolas;
-    font-weight: bold;
-    color: red;
-}
-.caution_sign{
-    background-color: red;
-    background-image: url('caution.jpg');
-    background-size: cover;
-    width: 4rem;
-    height: 3.9rem;
-    margin-left:5.5rem ;
-    margin-bottom: 0.1rem;
-}
-.yes_no_container{
-    margin-top: 1rem;
-    width: 15rem;
-    display: flex;
-    font-family: consolas;
-    font-weight: bold;
-    
-}
-.yes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 2rem;
-    border-radius: 10px;
-    border: 2px solid red;
-    margin-left: 2rem;
-    font-family: consolas;
-    font-weight: bold;
-    color: red;
-    cursor: pointer;
-}
-.yes:hover{
-    background-color: red;
-    color: white;
-}
-.no{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 2rem;
-    border-radius: 10px;
-    border: 2px solid green;
-    margin-left: 2rem;
-    color: green;
-    cursor: pointer;
-}
-.no:hover{
-    background-color: green;
-    color: white;
+    }
+    .conatiner_heading{
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        height: 3rem;
+        font-family: consolas;
+        font-weight: bold;
+        padding: 0.5rem 0.5rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+    .back_image{
+        background-image: url('back.jpg');
+        background-size: cover;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        left: 40%;
+        border-radius: 50%;
+        cursor: pointer;
+        
+    }
+    .attendence_data_Container{
+        width: 20rem;
+        height: 22rem;
+        border-radius: 10px;
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+    .add_icon{
+        margin-top: 0.5rem;
+        background-image: url('add_button.png');
+        background-size: cover;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        top: 3%;
+        left: 45%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .person_data{
+        padding: 0.5rem 0.2rem;
+        display: flex;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 19rem;
+        height: 2rem;
+        margin-left: 0.4rem;
+        margin-top: 0.3rem;
+    }
+    .person_data:hover{
+        cursor: pointer;
+        border: 2px solid rgb(4, 62, 4);
+    }
+    .person_name_container{
+        margin-top: -0.2rem;
+        display: flex;
+        align-items: center;
+        width: 9rem;
+        height: 2rem;
+        font-family: consolas;
+        font-size: 1rem;
+        font-weight: bold;
+        overflow-x: auto;
+        scrollbar-width: none;
+        border-radius: 10px;
+        padding: 0.2rem 0.2rem;
+    }
+    .call_image{
+        background-image: url('call2.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        left: -130%;
+    }
+    .absent_present_container{
+        position: relative;
+        left: 12%;
+        background-color: rgba(255, 0, 0, 0.3);
+        width: 5rem;
+        height: 2rem;
+        border-radius: 10px;
+        border: 2px solid red;
+        color: red;
+        font-family: consolas;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .present_text{
+        border: 2px solid green;
+        color: green;
+        background-color: rgba(0, 255, 0, 0.3);
+    }
+    .phone_nmber{
+        position: relative;
+        left: 20%;
+    }
+    .add_person_cover{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -100%;
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_add_person_cover{
+        top: 0%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .add_person_dailog_box{
+        top: -100%;
+        position: fixed;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 20rem;
+        height: 21rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .show_person_dailog_box{
+        top: 10%;
+    }
+    .heading{
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        background-color: green;
+        color: white;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        width: 19rem;
+        height: 2rem;
+        border-radius: 10px;
+    }
+    .cross_image{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        left: 40%;
+        border-radius: 60%;
+        cursor: pointer;
+    }
+    .take_person_details{
+        padding: 0.5rem 0.5rem;
+        align-items: center;
+    }
+    .person_details{
+        background: transparent;
+        border: 0rem;
+        outline: 0rem;
+        border-bottom: 1.5px solid green;
+        width: 15rem;
+        height: 2rem;
+        font-family: consolas;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .textarea{
+        outline: 0rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+        width: 17rem;
+        margin-left: 0.3rem;
+    }
+    .add_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19.5rem;
+        height: 2rem;
+        background-color: white;
+        color: green;
+        font-family: consolas;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    .add_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .submit_container{
+        display: flex;
+        align-items: center;
+    }
+    .submit_button{
+        margin-top: 0.5rem;
+        display: none;
+        width: 8rem;
+        height: 2.5rem;
+        cursor: pointer;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.3rem;
+        /* display: none; */
+    }
+    .show_submit_button{  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .cover_persona_data{
+        position: absolute;
+        top: -150%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+    .show_cover_person_data{
+        top: 0%;
+        opacity: 1;
+        /* z-index: 1; */
+    }
+    .update_person_dailog_box{
+        top: -100%;
+        position: fixed;
+        background-color: white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        width: 20rem;
+        height: 21rem;
+        padding: 0.5rem 0.5rem;
+    }
+    .show_update_person_dailog_box{
+        top: 10%;
+    }
+    .update_cross_image{
+        background-image: url('cross.png');
+        background-size: cover;
+        width: 2rem;
+        height: 2rem;
+        position: relative;
+        left: 30%;
+        border-radius: 60%;
+        cursor: pointer;
+    }
+    .button{
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        width: 19rem;
+        height: 3rem;
+        /* border: 2px solid gray; */
+    }
+    .update_button{
+        border-radius: 10px;
+        width: 7rem;
+        height: 2.5rem;
+        position: relative;
+        left: 60%;
+        border: 2px solid green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: consolas;
+        font-weight: bold;
+        cursor: pointer;
+        color: green;
+    }
+    .update_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .delete_button{
+        border-radius: 10px;
+        position: relative;
+        left: -30%;
+        width: 7rem;
+        height: 2.5rem;
+        border: 2px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: consolas;
+        font-weight: bold;
+        cursor: pointer;
+        color: red;
+    }
+    .delete_button:hover{
+        background-color: red;
+        color: white;
+    }
+    .delete_conformation{
+        box-shadow: 0 1rem 1rem 0 rgba(255, 0, 0, 0.325), 0 1rem 1rem 0 rgba(255, 0, 0, 0.325);
+        padding: 0.5rem 0.5rem;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform:translate(-50%,-80%) ;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 10px ;
+        border: 2px solid red;
+        opacity: 0;
+        z-index: -1;
+    }
+    .show_delete_conformation{
+        top: 50%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .delete_warning{
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: red;
+    }
+    .caution_sign{
+        background-color: red;
+        background-image: url('caution.jpg');
+        background-size: cover;
+        width: 4rem;
+        height: 3.9rem;
+        margin-left:5.5rem ;
+        margin-bottom: 0.1rem;
+    }
+    .yes_no_container{
+        margin-top: 1rem;
+        width: 15rem;
+        display: flex;
+        font-family: consolas;
+        font-weight: bold;
+        
+    }
+    .yes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 2rem;
+        border-radius: 10px;
+        border: 2px solid red;
+        margin-left: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: red;
+        cursor: pointer;
+    }
+    .yes:hover{
+        background-color: red;
+        color: white;
+    }
+    .no{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 2rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        margin-left: 2rem;
+        color: green;
+        cursor: pointer;
+    }
+    .no:hover{
+        background-color: green;
+        color: white;
+    }
 }

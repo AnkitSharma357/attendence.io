@@ -3,100 +3,204 @@
     padding: 0px;
     margin: 0px;
 }
-.loginform{
-    margin-top: 1rem;
-    border-radius: 10px;
-    width: 20rem;
-    height: 26rem;
-    background-color: white;
-    position: relative;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%,0%);
-    z-index: 1;
-    border: 2px solid gray;
-}
-.shwologinform{
-    top: -60%;
-    opacity: 0;
-    z-index: -1;
-    width: 0rem;
-    height: 0rem;
-}
-.form{
-    /* background-color: red; */
-    margin-top:1rem ;
-    margin-left: 2.5rem;
-    border-radius: 10px;
-    width: 15rem;
-    height: 14rem;
-    padding: 0.5rem 0.5rem;
-
-}
-.hedinglgin{
-    background-color: green;
-    margin-top: 1rem;
-    width: 14rem;
-    height: auto;
-    padding: 0.3rem 0.3rem;
-    border-radius: 10px ;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-family: consolas;
-    color: white;
-}
-.login_label{
-    font-size: 1.5rem;
-    font-family: consolas;
-    font-weight: bold;
-}
-.login_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 0.5rem;
-    text-align: center;
-    background-color:white;
-    color: green;
-    font-size: 1rem;
-    font-family: consolas;
-    width: 10rem;
-    height: 2rem;
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%,-50%);
-    border-radius: 10px ;
-    cursor: pointer;
-    font-weight: bold;
-    border: 2px solid green;
-}
-.login_button:hover{
-    background-color: green;
-    color: white;
+@media only screen and (max-width:900px){
+    .loginform{
+        margin-top: 1rem;
+        border-radius: 10px;
+        width: 22rem;
+        height: 37rem;
+        background-color: white;
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%,0%);
+        z-index: 1;
+        border: 2px solid gray;
+    }
+    .shwologinform{
+        top: -60%;
+        opacity: 0;
+        z-index: -1;
+        width: 0rem;
+        height: 0rem;
+    }
+    .form{
+        margin-top:1rem ;
+        margin-left: 0.35rem;
+        border-radius: 10px;
+        width: 21rem;
+        height: 23rem;
+        padding: 0.5rem 0.5rem;
+    
+    }
+    .hedinglgin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: green;
+        margin-top: 1rem;
+        width: 20rem;
+        height: 4rem;
+        padding: 0.3rem 0.3rem;
+        border-radius: 10px ;
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: consolas;
+        color: white;
+    }
+    .login_label{
+        font-size: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .login_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        background-color:white;
+        color: green;
+        font-size: 1.6rem;
+        font-family: consolas;
+        width: 21rem;
+        height: 3rem;
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px ;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid green;
+    }
+    .login_button:hover{
+        background-color: green;
+        color: white;
+        
+    }
+    .input_tag{
+        margin-bottom: 1rem;
+        border: 0px;
+        border-bottom: 2px solid green;
+        outline: none;
+        width: 20rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        cursor: pointer;
+    }
+    
+    .register{
+        padding: 0.2rem 0.5rem;
+        position: fixed;
+        top: 92%;
+        font-family: consolas;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
     
 }
-.input_tag{
-    border: 0px;
-    border-bottom: 2px solid green;
-    outline: none;
-    width: 14rem;
-    height: 2rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-family: consolas;
-    font-weight: bold;
-    color: green;
-    cursor: pointer;
-}
 
-.register{
-    padding: 0.2rem 0.5rem;
-    position: fixed;
-    top: 92%;
-    font-family: consolas;
-    font-weight: bold;
-    margin-top: 0.5rem;
+@media only screen and (min-width:901px) and (max-width:1024px){
+    .loginform{
+        margin-top: 1rem;
+        border-radius: 10px;
+        width: 20rem;
+        height: 26rem;
+        background-color: white;
+        position: relative;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%,0%);
+        z-index: 1;
+        border: 2px solid gray;
+    }
+    .shwologinform{
+        top: -60%;
+        opacity: 0;
+        z-index: -1;
+        width: 0rem;
+        height: 0rem;
+    }
+    .form{
+        /* background-color: red; */
+        margin-top:1rem ;
+        margin-left: 2.5rem;
+        border-radius: 10px;
+        width: 15rem;
+        height: 14rem;
+        padding: 0.5rem 0.5rem;
+    
+    }
+    .hedinglgin{
+        background-color: green;
+        margin-top: 1rem;
+        width: 14rem;
+        height: auto;
+        padding: 0.3rem 0.3rem;
+        border-radius: 10px ;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: consolas;
+        color: white;
+    }
+    .login_label{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .login_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        background-color:white;
+        color: green;
+        font-size: 1rem;
+        font-family: consolas;
+        width: 10rem;
+        height: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%,-50%);
+        border-radius: 10px ;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid green;
+    }
+    .login_button:hover{
+        background-color: green;
+        color: white;
+        
+    }
+    .input_tag{
+        border: 0px;
+        border-bottom: 2px solid green;
+        outline: none;
+        width: 14rem;
+        height: 2rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        cursor: pointer;
+    }
+    
+    .register{
+        padding: 0.2rem 0.5rem;
+        position: fixed;
+        top: 92%;
+        font-family: consolas;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+    
 }
-
 
