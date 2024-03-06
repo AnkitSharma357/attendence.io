@@ -1,0 +1,422 @@
+@media only screen and (max-width:900px){
+    .attendencecontainer{
+        position: absolute;
+        left: 50%;
+        top: 5%;
+        transform:translate(-50% , -5%);
+        padding: 0.5rem 0.5rem;
+        width: 23rem;
+        height: 47rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        background-color: white;
+        opacity: 1;
+        z-index: 1;
+    }
+    .hide_attendencecontainer{
+        top: 5%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .contain_heading_drop{
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 5rem;
+        background-color: green;
+        color: white;
+        font-family: consolas;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 0.5rem 0.5rem;
+        font-size: 2rem;
+    }
+    .heading{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .drop_image{
+        position: absolute;
+        left: 75%;
+        background-color: red;
+        background-image: url('drop.png');
+        background-size: cover;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    .logout{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 53%; 
+        margin-top: 0.5rem;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: 2px solid rgb(11, 125, 138);
+        color: rgb(11, 125, 138);
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .logout:hover{
+        background-color: rgb(11, 125, 138);
+        color: white;
+    }
+    .show_attendence{
+        /* background-color: red; */
+        margin-top: 1rem;
+        padding: 0.5rem 0.5rem;
+        width: 22rem;
+        height: 39rem;
+        border-radius: 10px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    
+    }
+    .student_information{
+        padding: 0.5rem 0.5rem;
+        position: absolute;
+        left: 50%;
+        top: -150%;
+        transform: translate(-50% , -35%);
+        background-color: white;
+        width: 23rem;
+        height: 22rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        opacity: 0;
+        z-index: -1;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+    }
+    .hide_student_information{
+        top: 50%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .contain_heading_cross{
+        color: white;
+        background-color: green;
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 3rem;
+        border-radius: 10px;
+    }
+    .cross_image{
+        position: relative;
+        left: 35%;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-image: url('cross.png');
+        background-size: contain;
+        cursor: pointer;
+    }
+    .student_details{
+        margin-top: 1rem;
+        width: 22rem;
+        height: 15rem;
+        /* background-color: blue; */
+        padding: 0.5rem 0.5rem;
+    }
+    .student_details input{
+        margin-bottom: 1rem;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid green;
+        width: 21rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: green;
+    }
+    .button{
+        width: 10rem;
+        height: 3rem;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        position: relative;
+        left: 3%;
+        top: 10%;
+    }
+    .button:hover{
+        background-color: green;
+        color: white;
+    }
+    .student_data{
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.2rem;
+        display: flex;
+        align-items: center;
+        width: 21rem;
+        height: 4rem;
+        border: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+    .date_container{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 2.5rem;
+        /* border: 2px solid gray; */
+        position: relative;
+        left: 10%;
+        color: green;
+    }
+    .attendence{
+        width: 2.5rem;
+        height: 2.5rem;
+        /* border: 2px solid gray; */
+        border-radius: 50%;
+        position: relative;
+        left: 45%;
+    }
+    .tick{
+        background-image: url('tick.png');
+        background-size: cover;
+    }
+    .cross{
+        background-image: url('error.webp');
+        background-size: cover;
+    }
+    .choise{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 2.5rem;
+    }
+}
+
+
+@media only screen and (min-width:1024px){
+    .attendencecontainer{
+        position: absolute;
+        left: 50%;
+        top: 5%;
+        transform:translate(-50% , -5%);
+        padding: 0.5rem 0.5rem;
+        width: 23rem;
+        height: 34rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        background-color: white;
+        opacity: 1;
+        z-index: 1;
+    }
+    .hide_attendencecontainer{
+        top: 5%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .contain_heading_drop{
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 5rem;
+        background-color: green;
+        color: white;
+        font-family: consolas;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 0.5rem 0.5rem;
+        font-size: 2rem;
+    }
+    .heading{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .drop_image{
+        position: absolute;
+        left: 75%;
+        background-color: red;
+        background-image: url('drop.png');
+        background-size: cover;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+    .logout{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 53%; 
+        margin-top: 0.5rem;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: 2px solid rgb(11, 125, 138);
+        color: rgb(11, 125, 138);
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .logout:hover{
+        background-color: rgb(11, 125, 138);
+        color: white;
+    }
+    .show_attendence{
+        margin-top: 1rem;
+        padding: 0.5rem 0.5rem;
+        width: 22rem;
+        height: 25rem;
+        border-radius: 10px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    
+    }
+    .student_information{
+        padding: 0.5rem 0.5rem;
+        position: absolute;
+        left: 50%;
+        top: -150%;
+        transform: translate(-50% , -50%);
+        background-color: white;
+        width: 23rem;
+        height: 22rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        opacity: 0;
+        z-index: -1;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+    }
+    .hide_student_information{
+        top: 50%;
+        opacity: 1;
+        z-index: 1;
+    }
+    .contain_heading_cross{
+        color: white;
+        background-color: green;
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 3rem;
+        border-radius: 10px;
+    }
+    .cross_image{
+        position: relative;
+        left: 35%;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-image: url('cross.png');
+        background-size: contain;
+        cursor: pointer;
+    }
+    .student_details{
+        margin-top: 1rem;
+        width: 22rem;
+        height: 15rem;
+        /* background-color: blue; */
+        padding: 0.5rem 0.5rem;
+    }
+    .student_details input{
+        margin-bottom: 1rem;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid green;
+        width: 21rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: green;
+    }
+    .button{
+        width: 10rem;
+        height: 3rem;
+        border: 2px solid green;
+        border-radius: 10px;
+        color: green;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        position: relative;
+        left: 3%;
+        top: 10%;
+    }
+    .button:hover{
+        background-color: green;
+        color: white;
+    }
+    .student_data{
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.2rem;
+        display: flex;
+        align-items: center;
+        width: 21rem;
+        height: 4rem;
+        border: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+    .date_container{
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 7rem;
+        height: 2.5rem;
+        /* border: 2px solid gray; */
+        position: relative;
+        left: 10%;
+        color: green;
+    }
+    .attendence{
+        width: 2.5rem;
+        height: 2.5rem;
+        /* border: 2px solid gray; */
+        border-radius: 50%;
+        position: relative;
+        left: 45%;
+    }
+    .tick{
+        background-image: url('tick.png');
+        background-size: cover;
+    }
+    .cross{
+        background-image: url('error.webp');
+        background-size: cover;
+    }
+    .choise{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        width: 22rem;
+        height: 2.5rem;
+    }
+}
+

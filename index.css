@@ -1,0 +1,326 @@
+@media only screen and (max-width:900px){
+    .loginconatiner{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .loginform{
+        position: absolute;
+        left: 50%;
+        top: -150%;
+        transform: translate(-50% , -5%);
+        background-color:white;
+        width: 22rem;
+        height: 43rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 0.5rem 0.5rem;
+    
+    }
+    .show_loginfrom{
+        top: 5%;
+    }
+    .hedinglgin{
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        padding: 0.2rem 0.2rem;
+        background-color: green;
+        width: 21.5rem;
+        height: 4rem;
+        border-radius: 10px;
+        color: white;
+    }
+    .form{
+        margin-left: 0.2rem;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 21.5rem;
+        height: 27rem;
+    }
+    .login_label{
+        font-family: consolas;
+        font-size: 1.5rem;
+        font-weight:bold;
+    }
+    .input_tag{
+        font-size: 1.5rem;
+        width: 20rem;
+        height: 2rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        border: 0rem;
+        outline: 0rem;
+        border-bottom: 1.5px solid green;
+    }
+    .login_button{
+        margin-left: 0.5rem;
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 21rem;
+        height: 3rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    .login_button:hover{
+        background-color: green;
+        color: white;
+    }
+    
+    .login_text{
+        margin-top: 0.9rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+
+    .account{
+        background-color: white;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        padding: 0.5rem 0.5rem;
+        width: 20rem;
+        height: 20rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        opacity: 1;
+        z-index: 1;
+    }
+    .hide_account{
+        top: -100%;
+        opacity: 0;
+        z-index: -1;
+    }
+    .account h4{
+        position: fixed;
+        top: 80%;
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 5rem;
+        background-color: green;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+    }
+    .student{
+        position: relative;
+        top: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 3rem;
+        background-color: rgb(6, 119, 127);
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .admin{
+        position: relative;
+        top: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 3rem;
+        background-color: rgb(135, 135, 7);
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .student:hover ,.admin:hover{
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+    }
+    
+}
+@media only screen and  (min-width:1024px){
+    .loginconatiner{
+        /* background-color: red; */
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    .loginform{
+        /* background-color:red; */
+        position: absolute;
+        left: 50%;
+        top: -100%;
+        transform: translate(-50% , -5%);
+        width: 18rem;
+        height: 30rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 0.5rem 0.5rem;
+    
+    }
+    .show_loginfrom{
+        top: 5%;
+    }
+    .hedinglgin{
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        padding: 0.2rem 0.2rem;
+        background-color: green;
+        width: 17.5rem;
+        height: 2rem;
+        border-radius: 10px;
+        color: white;
+    }
+    .form{
+        /* background-color: red; */
+        display: flexbox;
+        /* align-items: center; */
+        justify-content: center;
+        width: 18rem;
+        height: 21rem;
+        padding-left: 1rem;
+    }
+    .login_label{
+        font-family: consolas;
+        font-size: 1rem;
+        font-weight:bold;
+    }
+    .input_tag{
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        border: 0rem;
+        outline: 0rem;
+        border-bottom: 1.5px solid green;
+    }
+    .login_button{
+        margin-top: 0.5rem;
+        margin-left: 3rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: green;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 13rem;
+        height: 2rem;
+        border-radius: 10px;
+        border: 2px solid green;
+        cursor: pointer;
+    }
+    .login_button:hover{
+        background-color: green;
+        color: white;
+    }
+    .login_text{
+        margin-top: 0.9rem;
+        font-size: 1rem;
+        font-family: consolas;
+        font-weight: bold;
+    }
+    .account{
+        background-color: white;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50% , -50%);
+        padding: 0.5rem 0.5rem;
+        width: 20rem;
+        height: 20rem;
+        border: 2px solid gray;
+        border-radius: 10px;
+        opacity: 1;
+        z-index: 1;
+    }
+    .hide_account{
+        top: -100%;
+        opacity: 0;
+        z-index: -1;
+    }
+    .account h4{
+        position: fixed;
+        top: 80%;
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 5rem;
+        background-color: green;
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        /* padding: 0.1rem 0.3rem; */
+    }
+    .student{
+        position: relative;
+        top: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 3rem;
+        background-color: rgb(6, 119, 127);
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .admin{
+        position: relative;
+        top: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 3rem;
+        background-color: rgb(135, 135, 7);
+        font-size: 1.5rem;
+        font-family: consolas;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .student:hover ,.admin:hover{
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.325), 0 1rem 1rem 0 rgba(0, 0, 0, 0.325);
+    }
+}

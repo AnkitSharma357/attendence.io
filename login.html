@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="account">
+        <div class="heading">Account to login</div>
+        <div class="student" onclick="create_student_account()">Student</div>
+        <div class="admin" onclick="create_admin_account()"> Admin</div>
+        <h4>Don't have Account Regsiter yourself <a href="index.html">Register</a></h4>
+    </div>
+
+
+    <div class="loginform">
+        <center><div class="hedinglgin">Login</div></center>
+        <div class="form">
+            <form class="form_data">
+                <label class="login_label">User</label><br>
+                <input  class="input_tag" type="text" id="user_name"><br><br>
+                <label class="login_label">email</label><br>
+                <input class="input_tag" type="email" id="email"><br><br>
+                <label class="login_label">Password</label><br>
+                <input class="input_tag" type="password" id="password">
+                <br><br>
+            </form>
+        </div>
+        <div class="login_button" onclick="fetch_user()">Login</div>
+        <div class="register">Don't Have Account <a href="index.html">Register</a></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

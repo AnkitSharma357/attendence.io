@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_record</title>
+    <link rel="stylesheet" href="show_attendence.css">
+</head>
+<body>
+    
+    <div class="attendencecontainer">
+        <div class="contain_heading_drop">
+            <div class="heading" id="heading"></div>
+            <div class="drop_image" onclick="display_student_information()"></div>
+        </div>
+        <div class="show_attendence"></div>
+    </div>
+
+    <div class="student_information">
+        <div class="contain_heading_cross">
+            <div class="heading">Enter details</div>
+            <div class="cross_image" onclick="remove_student_information()"></div>
+        </div>
+        <div class="student_details">
+            <input type="number" id="phone" placeholder="enter phone_no"> <br>
+            <input type="text" id="group" placeholder="group name"> <br>
+            <input type="text" id="facilitor" placeholder="Facilitor"> <br>
+
+            <div class="choise">
+                <div class="button" onclick="getdata()">OK</div>
+                <div class="logout" onclick="logout()">Log Out</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="show_attendence.js"></script>
+</body>
+</html>
