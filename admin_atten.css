@@ -1,0 +1,115 @@
+.table_container{
+    padding: 0.5rem 0.5rem;
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50% , -5%);
+    width: 20rem;
+    height: 33rem;
+    border-radius: 10px;
+    border: 2px solid gray;
+    
+}
+.table_name{
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+    width: 19rem;
+    height: 4rem;
+    border-radius:10px ;
+    background-color: green;
+    color: white;
+    font-family: consolas;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.student_conatiner{
+    width: 19rem;
+    height: 24rem;
+    padding: 0.5rem 0.5rem;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.student_detail_container{
+    border-right: 1.5px solid gray;
+    padding: 0.2rem 0.4rem;
+    position: sticky;
+    width: 10rem;
+    margin-right: 0.5rem;
+}
+.student_details{
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    width: 19rem;
+    height: 4rem;
+    background-color: white;
+    overflow-x: scroll; 
+    scrollbar-width: none;
+}
+.attendence_container{
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.3rem;
+}
+.student_name_container{
+    font-size: 1.3rem;
+    font-family: consolas;
+    font-weight: bold;
+}
+.student_phone{
+    font-size: 0.8rem;
+    font-family: consolas;
+    font-weight: bold;
+}
+.date_container{
+    font-family: consolas;
+    font-weight: bold;
+}
+.markspresent{
+    /* background-color: red; */
+    background-image: url('tick.png');
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: 30%;
+    border-radius: 50%;
+}
+.marksabsent{
+    background-color:white;
+    background-image: url('error.webp');
+    background-size: cover;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    left: 30%;
+    border-radius: 50%;
+}
+.greenborder{
+    border-bottom:2px solid green;
+}
+.redborder{
+    border-bottom: 2px solid red;
+}
+.goback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 2rem;
+    color: white;
+    background-color: green;
+    /* margin-top: 0.5rem; */
+    position: relative;
+    left :12%;
+    top: 2%;
+    font-family: consolas;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
