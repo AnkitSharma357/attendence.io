@@ -18,8 +18,8 @@
         width: 4rem;
         height: 4rem;
         position: sticky;
-        margin-top: 10px;
-        margin-left: 80%;
+        /* margin-top: 5px; */
+        margin-left: 75%;
         border-radius: 50%;
         cursor: pointer;
     }
@@ -44,14 +44,14 @@
         background-image: url('logout4.webp');
         background-size: cover;
         border-radius: 51%;
-        margin-left: 40%;
+        margin-left: 35%;
         cursor: pointer;
     }
     .all_group_container{
         /* background-color: red; */
         margin-top: 0.1rem;
         width: 23rem;
-        height: 40rem;
+        height: 34rem;
         border-radius: 10px;
         overflow-y: auto;
         scrollbar-width: none;
@@ -62,9 +62,10 @@
         margin-top: 0.5rem;
         margin-bottom: 0.1rem;
         width: 22.5rem;
-        height: 9rem;
-        border-radius: 10px;
-        border: 2px solid gray;
+        height: 12rem;
+        /* border-radius: 10px; */
+        /* border: 2px solid gray; */
+        border-bottom: 2px solid green;
     }
     .delete_button{
         position: relative;
@@ -339,6 +340,46 @@
     .server_resopnse{
         border: 2px solid green;
     }
+    .show_attendence{
+        width: 2rem;
+        height: 2rem;
+        background-color:white;
+        background-image: url('show_attendence_2.png');
+        background-size: cover;
+        margin-bottom: 0.3rem;
+        border-radius: 50%;
+        position: relative;
+        top: 0%;
+        left: 89%;
+        cursor: pointer;
+    }
+    .show_attendence:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .nothing_div{
+        margin-top: 1rem;
+        position: relative;
+        left: 16%;
+        top: 10%;
+        width: 15rem;
+        height: 20rem;
+        
+    }
+    .nothing_image{
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
+        background-color: white;
+        background-image: url('empty-folder.svg');
+        background-size: contain;
+    }
+    .text_div{
+        text-align: right;
+        font-family: consolas;
+        color: gray;
+        position: relative;
+        top: 10%;
+    }
     
 }
 
@@ -351,8 +392,8 @@
     .group_container_cover{
         padding: 0.1rem 0.5rem;
         background-color: white;
-        min-width: 20rem;
-        min-height: 30rem;
+        width: 20rem;
+        height: 33rem;
         border-radius:10px ;
         border: 2px solid gray;
     }
@@ -388,7 +429,7 @@
         background-image: url('logout4.webp');
         background-size: cover;
         border-radius: 51%;
-        margin-left: 65%;
+        margin-left: 60%;
         cursor: pointer;
     }
     .all_group_container{
@@ -406,8 +447,25 @@
         margin-bottom: 0.1rem;
         width: 19.5rem;
         height: auto;
-        border-radius: 10px;
-        border: 2px solid gray;
+        /* border-radius: 10px;
+        border: 2px solid gray; */
+        border-bottom: 2px solid green;
+    }
+    .show_attendence{
+        width: 2rem;
+        height: 2rem;
+        background-color:white;
+        background-image: url('show_attendence_2.png');
+        background-size: cover;
+        margin-bottom: 0.3rem;
+        border-radius: 50%;
+        position: relative;
+        top: 0%;
+        left: 88%;
+        cursor: pointer;
+    }
+    .show_attendence:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .delete_button{
         position: relative;
@@ -674,6 +732,32 @@
     }
     .server_resopnse{
         border: 2px solid green;
+    }
+    .nothing_div{
+        margin-top: 1rem;
+        position: relative;
+        left: 13%;
+        top: 10%;
+        width: 15rem;
+        height: 20rem;
+        /* background-color: red; */
+        
+    }
+    .nothing_image{
+        border-radius: 50%;
+        width: 15rem;
+        height: 15rem;
+        background-color: white;
+        background-image: url('empty-folder.svg');
+        background-size: contain;
+    }
+    .text_div{
+        text-align: right;
+        font-family: consolas;
+        color: gray;
+        position: relative;
+        top: 10%;
+        /* background-color: blue; */
     }
     
 }

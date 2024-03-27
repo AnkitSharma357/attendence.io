@@ -11,17 +11,14 @@ function take_data(){
     }
     if(account == 'true'){
         security = document.querySelector('#securtiy_question').value;
-        console.log(security);
         if(security == ''){
             alert('security must be given');
         }
         else{
-            console.log(fristname,email,password,security);
             postdata(fristname,email,password,security);
         }
     }
     else{
-        console.log(fristname,email,password,security);
         postdata(fristname,email,password,security);
     }
 }
@@ -41,9 +38,8 @@ async function postdata(fristname,email,password,security_question){
         })
     }
 
-    let response = await fetch('https://attendenceserviceapp.cyclic.app/register/user',obj);
+    let response = await fetch('http://localhost:3000/register/user',obj);
     response = await response.json();
-    console.log(response);
 
     if(response.message == 'true'){
         alert('user register successfully');
@@ -56,16 +52,12 @@ async function postdata(fristname,email,password,security_question){
 
 function create_student_account(){
     account = 'false';
-    // account  = document.querySelector('.student').innerHTML;
-    // console.log(account);
     document.querySelector('.loginform').classList.add('show_loginfrom');
     document.querySelector('.account').classList.add('hide_account');   
 }
 
 function create_admin_account(){
     account = 'true';
-    // account  = document.querySelector('.admin').innerHTML;
-    // console.log(account);
     document.querySelector('.loginform').classList.add('show_loginfrom');
     document.querySelector('.account').classList.add('hide_account');
     

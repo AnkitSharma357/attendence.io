@@ -10,7 +10,6 @@ async function getdata(){
     }
     else{
         document.querySelector('.student_information').classList.remove('hide_student_information');
-        // document.querySelector('.attendencecontainer').classList.add('hide_attendencecontainer')
         let obj = {
             method:'POST',
             headers: {
@@ -22,11 +21,11 @@ async function getdata(){
                 name:facilitator
             })
         }
-        let postdata = await fetch('https://attendenceserviceapp.cyclic.app/show/attendence',obj)
+        let postdata = await fetch('http://localhost:3000/show/attendence',obj)
         postdata = await postdata.json();
         console.log(postdata);
     
-        let getdata = await fetch('https://attendenceserviceapp.cyclic.app/show/attendence/record',{method:'GET'});
+        let getdata = await fetch('http://localhost:3000/show/attendence/record',{method:'GET'});
         getdata = await getdata.json();
         console.log(getdata);
     
@@ -46,10 +45,7 @@ function remove_student_information(){
 function display_attendence_record(getdata){
     let heading = document.querySelector('#heading');
     heading.innerText = getdata[0].name;
-    // console.log(heading);
-    // console.log("lenght",getdata.length);
     let data = document.querySelector('.show_attendence');
-    // data.removeChild(student_data);
 
     for(let i=0;i<getdata.length;i++){
         let student_data = document.createElement('div');

@@ -1,79 +1,104 @@
 var result;
 var person_id;
 async function fetchperticulargroup(){
-    let data = await fetch('https://attendenceserviceapp.cyclic.app/tabledata',{method:'GET'});
+    let data = await fetch('http://localhost:3000/tabledata',{method:'GET'});
     data = await data.json();
-    result = data;
-    dataLenght = data.length;
-    create_div_for_attendence(data);
+    if(data.code == 'ER_NO_SUCH_TABLE'){
+        alert('Server error please Login again');
+        window.open('login.html','_self');
+    }
+    else{
+        result = data;
+        dataLenght = data.length;
+        create_div_for_attendence(data);
+    }
 }
 let get_person_name;
 let get_phone;
 let address;
 let commnets;
  async function create_div_for_attendence(data){
-    for(let i=0;i<=data.length;i++){
+
+    if(data.length == 0){
         let attendence_container = document.querySelector('.attendence_data_Container');
-        let person_data = document.createElement('div');
-        let person_name_container = document.createElement('div');
-        let person_name = document.createTextNode(data[i].name);
-        // let container = document.createElement('div');
-        let absent_present_container = document.createElement('div');
-        let absent_text = document.createTextNode('Absent');
-        let Present_text = document.createTextNode('Present');
-        let call_image = document.createElement('div');
-        let phone_nmber = document.createElement('a');
 
-        phone_nmber.href = 'tel:'+data[i].phone;
+        let nothing_div = document.createElement('div');
+        let nothing_image = document.createElement('div');
+        let text_div = document.createElement('div');
+        let text = document.createTextNode('Add students by click on the add button');
 
-        //adding class to the dynamic div
-        absent_present_container.className = 'absent_present_container';
-        person_data.classList.add('person_data');
-        person_name_container.classList.add('person_name_container');
-        call_image.classList.add('call_image');
-        absent_present_container.classList.add('absent_present_container');
-        phone_nmber.classList.add('phone_nmber');
-        person_name_container.id = i;
-        let person = person_name_container.id;
-        // container.appendChild(absent_present_container);
-
-        //Absent and Present logic
-        absent_present_container.onclick = function putattendence(){
-            let text = document.getElementById(person_data.id).querySelector('.absent_present_container').innerHTML
-            document.querySelector('.submit_button').classList.add('show_submit_button');
-            document.querySelector('.add_icon').classList.add('display_add_icon');
-            if(text == 'Absent'){
-                absent_present_container.removeChild(absent_text);
-                absent_present_container.appendChild(Present_text);
-                absent_present_container.classList.add('present_text');
+        nothing_div.classList.add('nothing_div');
+        nothing_image.classList.add('nothing_image');
+        text_div.classList.add('text_div');
+        text_div.appendChild(text);
+        nothing_div.appendChild(nothing_image);
+        nothing_div.appendChild(text_div);
+        attendence_container.appendChild(nothing_div);
+    }
+    else{
+        for(let i=0;i<=data.length;i++){
+            let attendence_container = document.querySelector('.attendence_data_Container');
+            let person_data = document.createElement('div');
+            let person_name_container = document.createElement('div');
+            let person_name = document.createTextNode(data[i].name);
+            // let container = document.createElement('div');
+            let absent_present_container = document.createElement('div');
+            let absent_text = document.createTextNode('Absent');
+            let Present_text = document.createTextNode('Present');
+            let call_image = document.createElement('div');
+            let phone_nmber = document.createElement('a');
+    
+            phone_nmber.href = 'tel:'+data[i].phone;
+    
+            //adding class to the dynamic div
+            absent_present_container.className = 'absent_present_container';
+            person_data.classList.add('person_data');
+            person_name_container.classList.add('person_name_container');
+            call_image.classList.add('call_image');
+            absent_present_container.classList.add('absent_present_container');
+            phone_nmber.classList.add('phone_nmber');
+            person_name_container.id = i;
+            let person = person_name_container.id;
+            // container.appendChild(absent_present_container);
+    
+            //Absent and Present logic
+            absent_present_container.onclick = function putattendence(){
+                let text = document.getElementById(person_data.id).querySelector('.absent_present_container').innerHTML
+                document.querySelector('.submit_button').classList.add('show_submit_button');
+                document.querySelector('.add_icon').classList.add('display_add_icon');
+                if(text == 'Absent'){
+                    absent_present_container.removeChild(absent_text);
+                    absent_present_container.appendChild(Present_text);
+                    absent_present_container.classList.add('present_text');
+                }
+                else if(text == 'Present'){
+                    absent_present_container.appendChild(absent_text);
+                    absent_present_container.removeChild(Present_text);
+                    absent_present_container.classList.remove('present_text');
+                }
             }
-            else if(text == 'Present'){
-                absent_present_container.appendChild(absent_text);
-                absent_present_container.removeChild(Present_text);
-                absent_present_container.classList.remove('present_text');
+    
+            //delete a perticular record
+            person_name_container.onclick = function update_tabledata(){
+                document.querySelector('.cover_persona_data').classList.add('show_cover_person_data');
+                document.querySelector('.update_person_dailog_box').classList.add('show_update_person_dailog_box');
+                person_id = person_data.id;
+                get_person_name = document.getElementById(person_id).querySelector('.person_name_container').innerHTML;
+                get_phone = data[person].phone;
+                address =data[person].address;
+                comments = data[person].comments;
+                get_person_details();
             }
+    
+            phone_nmber.appendChild(call_image);
+            person_name_container.appendChild(person_name);
+            person_data.appendChild(person_name_container);
+            person_data.appendChild(phone_nmber);
+            person_data.appendChild(absent_present_container);
+            absent_present_container.appendChild(absent_text);
+            person_data.id = data[i].id;
+            attendence_container.appendChild(person_data);
         }
-
-        //delete a perticular record
-        person_name_container.onclick = function update_tabledata(){
-            document.querySelector('.cover_persona_data').classList.add('show_cover_person_data');
-            document.querySelector('.update_person_dailog_box').classList.add('show_update_person_dailog_box');
-            person_id = person_data.id;
-            get_person_name = document.getElementById(person_id).querySelector('.person_name_container').innerHTML;
-            get_phone = data[person].phone;
-            address =data[person].address;
-            comments = data[person].comments;
-            get_person_details();
-        }
-
-        phone_nmber.appendChild(call_image);
-        person_name_container.appendChild(person_name);
-        person_data.appendChild(person_name_container);
-        person_data.appendChild(phone_nmber);
-        person_data.appendChild(absent_present_container);
-        absent_present_container.appendChild(absent_text);
-        person_data.id = data[i].id;
-        attendence_container.appendChild(person_data);
     }
 }
 
@@ -108,7 +133,7 @@ async function put_person_details(){
             comments: comments,
         })
     }
-    let data = await fetch('https://attendenceserviceapp.cyclic.app/postpersondetails',person_details);
+    let data = await fetch('http://localhost:3000/postpersondetails',person_details);
     data = await data.json();
     document.querySelector('.add_person_cover').classList.remove('show_add_person_cover');
     document.querySelector('.add_person_dailog_box').classList.remove('show_person_dailog_box');
@@ -147,7 +172,7 @@ async function submitAttendnece(){
         })
     }
 
-    let sendattendence =  await fetch('https://attendenceserviceapp.cyclic.app/attendencedata',obj);
+    let sendattendence =  await fetch('http://localhost:3000/attendencedata',obj);
     sendattendence = await sendattendence.json();
 
     if(sendattendence.query == 'ok'){
@@ -189,7 +214,7 @@ async function update_person(){
        })
     }
 
-    let sendupdate = await fetch('https://attendenceserviceapp.cyclic.app/updateperson',obj);
+    let sendupdate = await fetch('http://localhost:3000/updateperson',obj);
     sendupdate = await sendupdate.json();
     if(sendupdate.message == "updated"){
         alert('Person Updated Successufully');
@@ -251,7 +276,7 @@ async function removeperson(){
        })
     }
 
-    let delete_person = await fetch('https://attendenceserviceapp.cyclic.app/deleteuserformgroup',obj);
+    let delete_person = await fetch('http://localhost:3000/deleteuserformgroup',obj);
     delete_person = await delete_person.json();
 
     if(delete_person.message == "delete"){
